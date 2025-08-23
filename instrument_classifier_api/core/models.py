@@ -22,10 +22,10 @@ class AudioArchive(models.Model):
 
 #chunks
 class AudioFile(models.Model):
-    archive = models.ForeignKey(AudioArchive, on_delete=models.CASCADE, related_name="chunks")
-    file = models.FileField(upload_to="chunks/")
-    start_time = models.FloatField(help_text="Start time in seconds")
-    end_time = models.FloatField(help_text="End time in seconds")
+    archive = models.ForeignKey(AudioArchive, on_delete=models.CASCADE)
+    file = models.FileField(upload_to="chunks/")  # Store actual WAV files
+    start_time = models.FloatField()
+    end_time = models.FloatField()
     created_at = models.DateTimeField(auto_now_add=True)
 
 
