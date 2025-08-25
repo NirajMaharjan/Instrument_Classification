@@ -1,0 +1,143 @@
+/* Traditional Nepali Color Palette */
+:root {
+  /* Warm earth tones inspired by traditional Nepali aesthetics */
+  --deep-red: #8B1538;
+  --warm-red: #B91C3C;
+  --gold: #D4A574;
+  --warm-gold: #F3CD7A;
+  --deep-brown: #4A2C1A;
+  --warm-brown: #6B4226;
+  --cream: #FDF2E9;
+  --off-white: #FAF7F2;
+  --dark-text: #2C1810;
+  --light-text: #8B7355;
+
+  font-family: 'Georgia', 'Times New Roman', serif;
+  line-height: 1.6;
+  font-weight: 400;
+  color: var(--dark-text);
+  background-color: var(--off-white);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--off-white);
+  color: var(--dark-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Georgia', serif;
+  font-weight: 600;
+  color: var(--deep-red);
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: 2.5em;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: 2em;
+  line-height: 1.3;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+p {
+  color: var(--light-text);
+  margin-bottom: 1em;
+  line-height: 1.7;
+}
+
+a {
+  color: var(--deep-red);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--warm-red);
+}
+
+button {
+  border-radius: 8px;
+  border: 2px solid var(--deep-red);
+  padding: 12px 24px;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background: linear-gradient(135deg, var(--deep-red), var(--warm-red));
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(139, 21, 56, 0.2);
+}
+
+button:hover {
+  background: linear-gradient(135deg, var(--warm-red), var(--deep-red));
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(139, 21, 56, 0.3);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.secondary-button {
+  background: transparent;
+  color: var(--deep-red);
+  border: 2px solid var(--deep-red);
+}
+
+.secondary-button:hover {
+  background: var(--deep-red);
+  color: white;
+}
+
+/* Traditional pattern borders */
+.traditional-border {
+  border-top: 3px solid var(--gold);
+  position: relative;
+}
+
+.traditional-border::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--deep-red) 0px,
+    var(--deep-red) 10px,
+    var(--gold) 10px,
+    var(--gold) 20px
+  );
+}
+
+/* Subtle Nepali-inspired decorative elements */
+.decorative-element {
+  background: linear-gradient(45deg, transparent 30%, var(--gold) 50%, transparent 70%);
+  height: 2px;
+  margin: 20px 0;
+  opacity: 0.6;
+}
