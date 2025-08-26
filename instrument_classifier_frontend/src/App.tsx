@@ -6,6 +6,8 @@ import AboutPage from './components/AboutPage';
 import InstrumentDetail from './components/InstrumentDetail';
 import Footer from './components/Footer';
 import './App.css';
+import ResultsPage from './components/ResultsPage';
+import LoginPage from './components/LoginPage';
 
 const App: React.FC = () => {
   return (
@@ -16,8 +18,10 @@ const App: React.FC = () => {
           <Route path="/" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/instruments/:slug" element={<InstrumentDetail />} />
-          <Route path="/results" element={<ComingSoonPage title="Results" />} />
+          {/* <Route path="/results" element={<ComingSoonPage title="Results" />} /> */}
           <Route path="/contact" element={<ComingSoonPage title="Contact" />} />
+          <Route path="/results" element={<ResultsPage/>} />
+          <Route path="/login" element={<LoginPage/>} />
         </Routes>
       </main>
       <Footer />
